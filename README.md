@@ -3,19 +3,17 @@ This is a skeleton repository for the autonomous code of a driverless FS race ca
 
 The use of **Ubuntu 16.04 and ROS Kinetic** is assumed everywhere on this repository.
 
-[TOC]
-
 # Repository organisation
 
 The code is organised in several top level packages/directories. The top level should adhere to the following subdivision of functionality (a more detailed description can be found in the folders themselves):
 
-**common/ ** - top-level launchfiles, and other files used by many packages
+**fsd_common/** - top-level launchfiles, and other files used by many packages
 
-**perception/ ** - folder for perception packages
+**perception/** - folder for perception packages
 
-**estimation/ ** - folder for estimation packages
+**estimation/** - folder for estimation packages
 
-**control/ ** - folder for control packages
+**control/** - folder for control packages
 
 - - - -
 
@@ -56,6 +54,8 @@ Once running `update_dependencies`, some aliases for commands will be added. Res
 * `FSD_launch_autox`: launch autox mission
 * `FSD_launch_skidpad`: launch skidpad mission
 * `FSD_launch_scruti`: launch scruti mission
+
+More custom aliases can be added in the `fsd_aliases` file.
 - - - -
 
 # Setting up the Workspace
@@ -138,3 +138,8 @@ PEP-8 style (http://wiki.ros.org/PyStyleGuide)
 ### README files
 Markdown syntax (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
+# Future improvements
+
+* Better dependency management example and documentation
+* Jenkins setup
+* ...
