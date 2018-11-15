@@ -1,0 +1,39 @@
+# Ignore catkin generated folders
+devel/
+devel/*
+build/
+build/*
+logs/
+logs/*
+.rosinstall
+.rosinstall.bak
+
+# Ignore all Rosbags
+**.bag
+# Ignore all images
+**.jpg
+**.png
+**.jpeg
+
+# Others
+.idea/
+.idea/*
+cmake-build-debug/
+cmake-build-debug/*
+cmake-build-release/
+cmake-build-release/*
+clion/
+clion-cmake/
+clion-cmake/*
+
+# Catkin stuff
+.catkin_tools/*
+.catkin_tools/
+
+**.swp
+
+# binary files
+*.pyc
+
+# Profiler files
+*.prof
