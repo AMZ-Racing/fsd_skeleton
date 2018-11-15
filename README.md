@@ -1,4 +1,5 @@
-**FS Driverless 2019**
+# FS Driverless 2019
+
 This is a skeleton repository for the autonomous code of a driverless FS race car. This README contains some information to get you started.
 
 The use of **Ubuntu 16.04 and ROS Kinetic** is assumed everywhere on this repository.
