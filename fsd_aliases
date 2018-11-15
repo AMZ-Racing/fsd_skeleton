@@ -12,3 +12,10 @@ alias FSD_launch_skidpad="roslaunch fsd_common_meta skidpad.launch"
 alias FSD_launch_acceleration="roslaunch fsd_common_meta acceleration.launch"
 alias FSD_launch_autox="roslaunch fsd_common_meta autox.launch"
 alias FSD_launch_scruti="roslaunch fsd_common_meta scruti.launch"
+
+# RVIZ Launching
+alias FSD_rviz_trackdrive="roslaunch fsd_common_meta rviz_trackdrive.launch"
+alias FSD_rviz_skidpad="roslaunch fsd_common_meta rviz_skidpad.launch"
+alias FSD_rviz_acceleration="roslaunch fsd_common_meta rviz_acceleration.launch"
+alias FSD_rviz_autox="roslaunch fsd_common_meta rviz_autox.launch"
+alias FSD_rviz_scruti="roslaunch fsd_common_meta rviz_scruti.launch"

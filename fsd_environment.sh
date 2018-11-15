@@ -4,7 +4,7 @@ CATKIN_SHELL=bash
 
 export FSD_ROOT=$( cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd)
 
-printf "Sourcing skeleton_repo/devel/setup.bash\n"
+printf "Sourcing fsd_skeleton/devel/setup.bash\n"
 
 # check whether devel folder exists
 if [ -f "${FSD_ROOT}/devel/setup.bash" ]; then

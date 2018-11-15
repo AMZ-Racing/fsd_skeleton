@@ -164,7 +164,7 @@ fi
 echo "Blacklisting packages: " ${BLACKLIST_PACKAGES}
 catkin init
 if [ -n "${BLACKLIST_PACKAGES}" ]; then
-	catkin config --blacklist ${BLACKLIST_PACKAGES}
+	catkin config --blacklist ${BLACKLIST_PACKAGES} --cmake-args -DCMAKE_BUILD_TYPE=Release
 else
-	catkin config --no-blacklist
+	catkin config --no-blacklist --cmake-args -DCMAKE_BUILD_TYPE=Release
 fi
