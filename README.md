@@ -52,13 +52,10 @@ Once running `update_dependencies`, some aliases for commands will be added. Res
 * `FSD_source`: sources environment from anywhere
 * `FSD_cd`: change directory to root directory of skeleton_repo
 * `FSD_build`: clean and build project (catkin clean and catkin build)
-* `FSD_launch_acceleration`: launch acceleration mission
-* `FSD_launch_trackdrive`: launch trackdrive mission
-* `FSD_launch_autox`: launch autox mission
-* `FSD_launch_skidpad`: launch skidpad mission
-* `FSD_launch_scruti`: launch scruti mission
+* `FSD_launch_acceleration`: launch mission, e.g. acceleration, trackdrive, autox etc
+* `FSD_rviz_acceleration`: launch RVIZ with custom config for mission, e.g. acceleration, trackdrive, autox etc 
 
-More custom aliases can be added in the `fsd_aliases` file.
+Look at`fsd_aliases` to see full list, or add more custom aliases.
 - - - -
 
 # Setting up the Workspace
@@ -145,4 +142,5 @@ Markdown syntax (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatshee
 
 * Better dependency management example and documentation
 * Jenkins setup
+* RVIZ setup
 * ...
