@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>perception_meta</name>
+  <version>0.0.0</version>
+  <description>Meta package for perception</description>
+  <maintainer email="sonjabritss@gmail.com">Sonja Brits</maintainer>
+  <license>TODO</license>
+  <author email="sonjabritss@gmail.com">Sonja Brits</author>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!--TODO: Add the packages you want to build-->
+  <depend>lidar_cone_detector</depend>
+  <depend>vision_cone_detector</depend>
+
+  <export>
+  </export>
+</package>

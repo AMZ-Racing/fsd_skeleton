@@ -1,0 +1,5 @@
+<launch>
+    <node name="vision_cone_detector_node" pkg="vision_cone_detector" type="vision_cone_detector" output="screen">
+        <rosparam command="load" file="$(find vision_cone_detector)/config/cone_detector.yaml" /> <!--Load parameters from config files-->
+    </node>
+</launch>

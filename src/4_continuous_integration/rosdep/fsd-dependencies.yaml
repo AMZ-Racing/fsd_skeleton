@@ -1,0 +1,18 @@
+fsd-python-wstool:
+  ubuntu: [python-wstool]
+fsd-checkinstall:
+  ubuntu: [checkinstall]
+fsd-python-pip:
+  ubuntu: [python-pip]
+fsd-python-catkin-tools:
+  ubuntu: [python-catkin-tools]
+fsd-libcgal-qt5-dev:
+  ubuntu: [libcgal-qt5-dev]
+fsd-python-rospkg:
+  ubuntu: [python-rospkg]
+fsd-python-empy:
+  ubuntu: [python-empy]
+fsd-libgsl-dev:
+  ubuntu: [libgsl-dev]
+fsd-python-git:
+  ubuntu: [python-git]

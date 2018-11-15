@@ -1,0 +1,14 @@
+#!/bin/bash
+
+FSD_ROOT=$( cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd)
+
+alias FSD_source="source ${FSD_ROOT}/fsd_environment.sh"
+alias FSD_build="catkin clean --yes && catkin build"
+alias FSD_cd="cd ${FSD_ROOT}"
+
+# Missions
+alias FSD_launch_trackdrive="roslaunch fsd_common_meta trackdrive.launch"
+alias FSD_launch_skidpad="roslaunch fsd_common_meta skidpad.launch"
+alias FSD_launch_acceleration="roslaunch fsd_common_meta acceleration.launch"
+alias FSD_launch_autox="roslaunch fsd_common_meta autox.launch"
+alias FSD_launch_scruti="roslaunch fsd_common_meta scruti.launch"

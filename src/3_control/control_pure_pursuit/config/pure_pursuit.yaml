@@ -1,0 +1,8 @@
+velocity_estimate_topic_name: /estimation/velocity_estimation/velocity_estimate
+slam_map_topic_name: /estimation/slam/map
+slam_state_topic_name: /estimation/slam/state
+control_command_topic_name: /control/pure_pursuit/control_command
+
+max_speed: 1.5  # [m/s]
+
+node_rate: 10   # [Herz]

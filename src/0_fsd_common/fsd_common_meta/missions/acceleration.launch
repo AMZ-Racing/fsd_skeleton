@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find perception_meta)/missions/acceleration.launch"/>
+  <include file="$(find estimation_meta)/missions/acceleration.launch"/>
+  <include file="$(find control_meta)/missions/acceleration.launch"/>
+
+</launch>

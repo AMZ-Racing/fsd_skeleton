@@ -1,0 +1,10 @@
+
+vision_cone_detections_topic_name: /perception/vision/cone_detections
+lidar_cone_detections_topic_name: /perception/lidar/cone_detections
+velocity_estimate_topic_name: /estimation/velocity_estimation/velocity_estimate
+slam_map_topic_name: /estimation/slam/map
+slam_state_topic_name: /estimation/slam/state
+
+max_map_size: 25
+
+node_rate: 1   # [Herz]

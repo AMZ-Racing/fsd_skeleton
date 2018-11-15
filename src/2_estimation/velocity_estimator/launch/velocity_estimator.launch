@@ -1,0 +1,5 @@
+<launch>
+    <node name="velocity_estimator_node" pkg="velocity_estimator" type="velocity_estimator" output="screen">
+        <rosparam command="load" file="$(find velocity_estimator)/config/velocity_estimator.yaml" /> <!--Load parameters from config files-->
+    </node>
+</launch>

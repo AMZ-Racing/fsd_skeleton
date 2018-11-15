@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find vision_cone_detector)/launch/cone_detector.launch"/>
+  <include file="$(find lidar_cone_detector)/launch/cone_detector.launch"/>
+</launch>

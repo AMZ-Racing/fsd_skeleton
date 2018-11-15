@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>control_pure_pursuit</name>
+  <version>0.0.0</version>
+  <description>Simple pure pursuit control node, that inputs pose, map and velocity estimate, and outputs control command</description>
+  <maintainer email="britss@student.ethz.ch">Sonja Brits</maintainer>
+  <license>TODO</license>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!--For custom message import-->
+  <depend>fsd_common_msgs</depend>
+
+  <!--Other depends-->
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+
+  <export>
+  </export>
+</package>

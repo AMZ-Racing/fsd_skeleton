@@ -1,0 +1,5 @@
+<launch>
+    <node name="control_pure_pursuit_node" pkg="control_pure_pursuit" type="control_pure_pursuit" output="screen">
+        <rosparam command="load" file="$(find control_pure_pursuit)/config/pure_pursuit.yaml" /> <!--Load parameters from config files-->
+    </node>
+</launch>

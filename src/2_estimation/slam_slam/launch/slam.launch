@@ -1,0 +1,5 @@
+<launch>
+    <node name="slam_slam_node" pkg="slam_slam" type="slam_slam" output="screen">
+        <rosparam command="load" file="$(find slam_slam)/config/slam.yaml" /> <!--Load parameters from config files-->
+    </node>
+</launch>

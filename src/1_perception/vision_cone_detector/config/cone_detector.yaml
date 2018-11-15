@@ -1,0 +1,4 @@
+
+cone_detections_topic_name: /perception/vision/cone_detections
+
+node_rate: 1   # [Herz]
