@@ -1,0 +1,4 @@
+<launch>
+     <node name="fssim_rviz" pkg="rviz" type="rviz" args="-d $(find fssim_interface)/rviz/trackdrive.rviz"/>
+     <node name="rqt_multiplot" pkg="rqt_multiplot" type="rqt_multiplot" args="--multiplot-config $(env FSD_ROOT)/src/fssim_interface/rviz/fssim.xml --multiplot-run-all"/>
+</launch>

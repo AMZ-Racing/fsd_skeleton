@@ -1,0 +1,32 @@
+simulation_name: "Testing what gets wrong first"
+
+robot_name: gotthard  # Name of the robot [string]
+kill_after: 6000      # After this time, repetition is stopped [s]
+
+pkg_config_storage: fssim_interface # If relative path is given in following config files, the path will be taken
+                                    # wrt to this package
+# Config files for repetitions
+repetitions:
+- {sensors_config_file: fssim_config/sensors/sensors_1.yaml, track_name: bag_2.sdf, autonomous_stack: }
+
+# Checks which must be true in order to automatically press RES GO
+res:
+  checks:
+    is_in_track: true
+
+# Launch files for autonomous missions
+launch_file:
+  rosbag_record: 
+
+# bag_1.sdf : Tuggen shorter, wiggle
+# bag_2.sdf : Tuggen Slippery corner
+# bag_3.sdf : Wemding
+# bag_4.sdf : Tuggen track
+# bag_5.sdf : Tuggen track
+# bag_6.sdf : Dubi track, ugly
+# bag_7.sdf : FSI
+# bag_8.sdf : Tuggen, long straight
+# bag_9.sdf : Dubi, ugly
+# bag_10.sdf : Tuggen Slippery corner
+# youtube_track.sdf
+# bag_alpnach_1.sdf

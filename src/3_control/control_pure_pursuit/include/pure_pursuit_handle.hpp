@@ -32,7 +32,7 @@ class PurePursuitHandle {
 
  public:
   // Constructor
-  PurePursuitHandle(ros::NodeHandle &nodeHandle);
+  explicit PurePursuitHandle(ros::NodeHandle &nodeHandle);
 
 //  // Getters
   int getNodeRate() const;
@@ -47,7 +47,10 @@ class PurePursuitHandle {
 
  private:
   ros::NodeHandle nodeHandle_;
+
   ros::Publisher controlCommandPublisher_;
+  ros::Publisher centerLinePublisher_;
+
   ros::Subscriber slamMapSubscriber_;
   ros::Subscriber slamStateSubscriber_;
   ros::Subscriber velocityEstimateSubscriber_;
@@ -60,6 +63,8 @@ class PurePursuitHandle {
   std::string slam_map_topic_name_;
   std::string slam_state_topic_name_;
   std::string control_command_topic_name_;
+  std::string center_line_topic_name_;
+
   int node_rate_;
   double max_speed_;
 

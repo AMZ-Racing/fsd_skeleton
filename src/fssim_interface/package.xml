@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+
+    <name>fssim_interface</name>
+    <version>0.0.0</version>
+    <description>Remmaper for FSSIM</description>
+    <maintainer email="kabzanj@ehtz.ch">Juraj Kabzan</maintainer>
+    <license>TODO</license>
+    <author email="kabzanj@ehtz.ch">Juraj Kabzan</author>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <!--Other depends-->
+    <build_depend>roscpp</build_depend>
+    <build_export_depend>roscpp</build_export_depend>
+    <exec_depend>roscpp</exec_depend>
+
+    <depend>nav_msgs</depend>
+    <depend>fsd_common_msgs</depend>
+    <depend>tf</depend>
+    <depend>fssim</depend>
+
+</package>

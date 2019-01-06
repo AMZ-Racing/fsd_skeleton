@@ -1,0 +1,20 @@
+simulation_name: "ATS Simulation"
+
+robot_name: gotthard  # Name of the robot [string]
+kill_after: 1000      # After this time, repetition is stopped [s]
+
+pkg_config_storage: fssim_interface # If relative path is given in following config files, the path will be taken
+                                    # wrt to this package
+# Config files for repetitions
+repetitions:
+- {sensors_config_file: fssim_config/sensors/sensors_1.yaml, track_name: bag_2.sdf, autonomous_stack: roslaunch fssim_interface trackdrive.launch }
+
+
+# Checks which must be true in order to automatically press RES GO
+res:
+  checks:
+    is_in_track: true
+
+# Launch files for autonomous missions
+launch_file:
+  rosbag_record:    roslaunch fssim_interface record_sim.launch bag_save_path:={}

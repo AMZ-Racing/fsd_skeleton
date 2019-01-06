@@ -19,7 +19,9 @@
 
 #ifndef CONTROL_PURE_PURSUIT_HPP
 #define CONTROL_PURE_PURSUIT_HPP
+#include "ros/ros.h"
 
+#include <geometry_msgs/Polygon.h>
 #include "fsd_common_msgs/ControlCommand.h"
 #include "fsd_common_msgs/Map.h"
 #include "fsd_common_msgs/CarState.h"
@@ -32,35 +34,42 @@ namespace ns_pure_pursuit {
 class PurePursuit {
 
  public:
-  // Constructor
-  PurePursuit();
+    // Constructor
+    PurePursuit(ros::NodeHandle& nh);
 
-  // Getters
-  fsd_common_msgs::ControlCommand getControlCommand() const;
+    // Getters
+    fsd_common_msgs::ControlCommand getControlCommand() const;
 
-  // Setters
-  void setMaxSpeed(double &max_speed);
-  void setMap(const fsd_common_msgs::Map &map);
-  void setState(const fsd_common_msgs::CarState &state);
-  void setVelocity(const fsd_common_msgs::CarStateDt &velocity);
+    // Setters
+    void setMaxSpeed(double &max_speed);
+    void setCenterLine(const geometry_msgs::Polygon &center_line);
+    void setState(const fsd_common_msgs::CarState &state);
+    void setVelocity(const fsd_common_msgs::CarStateDt &velocity);
 
-  /**
-   *  creates the cone detections
-   */
-  void createControlCommand();
+    /**
+     *  creates the cone detections
+     */
+    void createControlCommand();
 
-  /**
-   * calls the other functions in the right order
-   */
-  void runAlgorithm();
+    /**
+     * calls the other functions in the right order
+     */
+    void runAlgorithm();
 
  private:
-  fsd_common_msgs::Map map_;
-  fsd_common_msgs::CarState state_;
-  fsd_common_msgs::CarStateDt velocity_;
-  fsd_common_msgs::ControlCommand control_command_;
+    ros::NodeHandle& nh_;
 
-  double max_speed_;
+    ros::Publisher pub_closest_point_;
+
+    double speed_p;
+    double steering_p;
+
+    geometry_msgs::Polygon          center_line_;
+    fsd_common_msgs::CarState       state_;
+    fsd_common_msgs::CarStateDt     velocity_;
+    fsd_common_msgs::ControlCommand control_command_;
+
+    double max_speed_;
 };
 }
 

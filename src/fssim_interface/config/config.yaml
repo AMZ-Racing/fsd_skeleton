@@ -1,0 +1,18 @@
+fssim:
+  topic_odom: "/fssim/base_pose_ground_truth"
+  track: "/fssim/track"
+  cmd: "/fssim/cmd"
+  res: "/fssim/res_state"
+  mission_finnished: "/fssim/mission_finished"
+
+fsd:
+  vel: "/estimation/velocity_estimation/velocity_estimation"
+  cmd: "/control/pure_pursuit/control_command"
+  res: "/res/state"
+  state: "/estimation/slam/state"
+  map: "/estimation/slam/map"
+  mission_finnished: "/control/mission_finished"
+  tf:
+    origin: "/map"
+    fsd_car_base_link: "/fsd_car/base_link"
+    publish_car_base_link: true
