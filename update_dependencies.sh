@@ -15,9 +15,9 @@ ROS_PACKAGE=(
 )
 
 FSD_WORKPACKAGES=(
-    'perception'
-    'estimation'
-    'control'
+    '1_perception'
+    '2_estimation'
+    '3_control'
 )
 
 BLACKLIST_PACKAGES=''
@@ -37,7 +37,7 @@ if [ -z $FSSIM ]; then
     BLACKLIST_PACKAGES='fssim_interface fssim'
 else 
     echo "ENABLED"
-    AMZ_WORKPACKAGES=("${AMZ_WORKPACKAGES[@]}" 'fssim_interface')
+    FSD_WORKPACKAGES=("${FSD_WORKPACKAGES[@]}" 'fssim_interface')
 fi
 
 #####################################
