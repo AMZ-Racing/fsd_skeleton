@@ -4,9 +4,9 @@
     <name>fssim_interface</name>
     <version>0.0.0</version>
     <description>Remmaper for FSSIM</description>
-    <maintainer email="kabzanj@ehtz.ch">Juraj Kabzan</maintainer>
-    <license>TODO</license>
-    <author email="kabzanj@ehtz.ch">Juraj Kabzan</author>
+    <maintainer email="kabzanj@gmail.com">Juraj Kabzan</maintainer>
+    <author email="kabzanj@gmail.com">Juraj Kabzan</author>
+    <license>MIT</license>
 
     <buildtool_depend>catkin</buildtool_depend>
 

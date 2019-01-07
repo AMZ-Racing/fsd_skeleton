@@ -3,9 +3,7 @@ Panels:
     Help Height: 93
     Name: Displays
     Property Tree Widget:
-      Expanded:
-        - /Camera Observations1
-        - /Lidar Observations1
+      Expanded: ~
       Splitter Ratio: 0.663888872
     Tree Height: 732
   - Class: rviz/Selection
@@ -157,7 +155,7 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: Intensity
       Decay Time: 0
-      Enabled: false
+      Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 0
       Max Intensity: 1
@@ -174,7 +172,7 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: false
-      Value: false
+      Value: true
     - Alpha: 0.5
       Autocompute Intensity Bounds: false
       Autocompute Value Bounds:

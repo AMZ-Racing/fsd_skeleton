@@ -1,20 +1,29 @@
-# AMZ Driverless Project
-#
+# AMZ-Driverless
 # Copyright (c) 2018 Authors:
-#   - Juraj Kabzan <kabzanj@student.ethz.ch>
+#   - Juraj Kabzan <kabzanj@gmail.com>
 #
-# All rights reserved.
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
 #
-# Unauthorized copying of this file, via any medium is strictly prohibited
-# Proprietary and confidential
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
 
 # All positions (pos) are with respect to chassis origin
 
 stream_track:
   enabled: true
-  inside: "/fssim/boundary/inside"
-  outside: "/fssim/boundary/outside"
-  middle: "/fssim/boundary/middle"
   markers: "/fssim/track"
 
 
@@ -36,18 +45,13 @@ sensors:
     enabled: true
     node_name: lidar_pipeline             # This name MUST BE the SAME to this section yaml file
     topic_name: /lidar/cones              # Where should the cones be published
-
     overwrite:
       enabled: true
-      frame: fsd_car/base_link           # Frame the cones are represented in
-
+      frame: gotthard/base_link           # Frame the cones are represented in
     rate: 10                              # Publishing frequency [Hz]
-
     delay: 
       time: 0.2                           # Delay [s]
       noise_sigma: 0.002                  # Additive gassian noise on delay 
-
-
     cut_cones_below_x:            -1      # Cut cones that are further than this distance in x car axis
 
     observation_radius:           15.0    # Below this threshold we can observe cones [m]
@@ -77,16 +81,12 @@ sensors:
     topic_name: /camera/cones
     overwrite:
       enabled: true
-      frame: fsd_car/base_link           # Frame the cones are represented in
-
+      frame: gotthard/base_link           # Frame the cones are represented in
     rate: 10                              # Publishing frequency [Hz]
-
     delay: 
       time: 0.2                           # Delay [s]
       noise_sigma: 0.002                  # Additive gassian noise on delay 
-
     cut_cones_below_x:            -1      # Cut cones that are further than this distance in x car axis
-
     observation_radius:           10.0    # Below this threshold we can observe cones [m]
     distance_dependent_observation: 100.0 # The probability of observation decreases with factor = -1/distance_dependent_misclass * r + 1
     observation_likelihood_left:  1.0     # Likelihood of observing left              [0..1]

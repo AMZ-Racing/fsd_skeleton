@@ -9,8 +9,6 @@
 
     <include file="$(find fssim_interface)/launch/rviz.launch"/>
 
-    <node pkg="tf" type="static_transform_publisher" name="fssim_map_to_map" args="0 0 0 0 0 0 fssim_map map 100"/>
-
     <include file="$(find fssim_interface)/launch/only_interface.launch"/>
 
 </launch>
