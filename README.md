@@ -54,6 +54,7 @@ Once running `update_dependencies`, some aliases for commands will be added. Res
 * `FSD_build`: clean and build project (catkin clean and catkin build)
 * `FSD_launch_acceleration`: launch mission, e.g. acceleration, trackdrive, autox etc
 * `FSD_rviz_acceleration`: launch RVIZ with custom config for mission, e.g. acceleration, trackdrive, autox etc 
+* `FSD_ATS`: run automated test
 
 Look at`fsd_aliases` to see full list, or add more custom aliases.
 - - - -
