@@ -29,7 +29,7 @@ pkg_config_storage: fssim_interface # If relative path is given in following con
                                     # wrt to this package
 # Config files for repetitions
 repetitions:
-- {sensors_config_file: fssim_config/sensors/sensors_1.yaml, track_name: track_test.sdf, autonomous_stack: roslaunch fssim_interface trackdrive.launch }
+- {sensors_config_file: fssim_config/sensors/sensors_1.yaml, track_name: FSG.sdf, autonomous_stack: roslaunch fssim_interface trackdrive.launch }
 - {sensors_config_file: fssim_config/sensors/sensors_1.yaml, track_name: FSI.sdf, autonomous_stack: roslaunch fssim_interface trackdrive.launch }
 
 
