@@ -63,7 +63,7 @@ Look at`fsd_aliases` to see full list, or add more custom aliases.
 
 ```
 cd ~
-git clone git clone git@github.com:AMZ-Driverless/fsd_skeleton.git
+git clone git@github.com:AMZ-Driverless/fsd_skeleton.git
 ```
 **2 Install dependencies**
 ```
