@@ -90,7 +90,7 @@ void SlamHandle::run() {
 }
 
 void SlamHandle::sendMap() {
-  slam_map_.cone_map = slam_.getMap();
+  slam_map_.cone_blue = slam_.getMap();
   slam_map_.header.stamp = ros::Time::now();
   slamMapPublisher_.publish(slam_map_);
   ROS_INFO("SLAM map sent");

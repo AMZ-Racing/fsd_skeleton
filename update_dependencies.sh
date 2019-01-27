@@ -15,12 +15,30 @@ ROS_PACKAGE=(
 )
 
 FSD_WORKPACKAGES=(
-    'perception'
-    'estimation'
-    'control'
+    '1_perception'
+    '2_estimation'
+    '3_control'
 )
 
 BLACKLIST_PACKAGES=''
+
+###################################
+# Decide whether to include fssim #
+###################################
+case $1 in
+    -f|--fssim)
+    FSSIM="TRUE"
+    ;;
+esac
+
+printf "FSSIM is..."
+if [ -z $FSSIM ]; then
+    echo "DISABLED"
+    BLACKLIST_PACKAGES='fssim_interface fssim'
+else 
+    echo "ENABLED"
+    FSD_WORKPACKAGES=("${FSD_WORKPACKAGES[@]}" 'fssim_interface')
+fi
 
 #####################################
 # 			Set paths 				#
@@ -167,4 +185,16 @@ if [ -n "${BLACKLIST_PACKAGES}" ]; then
 	catkin config --blacklist ${BLACKLIST_PACKAGES} --cmake-args -DCMAKE_BUILD_TYPE=Release
 else
 	catkin config --no-blacklist --cmake-args -DCMAKE_BUILD_TYPE=Release
+fi
+
+#################################################
+#           If fssim enabled update deps        #
+#################################################
+if [ ! -z $FSSIM ]; then
+    printf "Updating FSSIM dependencies..."
+    cd src/fssim/
+    git pull
+    ./update_dependencies.sh
+    git lfs pull
+    cd ../../
 fi

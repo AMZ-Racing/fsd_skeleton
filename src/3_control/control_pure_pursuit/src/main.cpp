@@ -25,11 +25,11 @@ typedef ns_pure_pursuit::PurePursuitHandle PurePursuitHandle;
 int main(int argc, char **argv) {
   ros::init(argc, argv, "purePursuit");
   ros::NodeHandle nodeHandle("~");
-  PurePursuitHandle myPurePursuitHandle(nodeHandle);
-  ros::Rate loop_rate(myPurePursuitHandle.getNodeRate());
+  PurePursuitHandle purePursuitHandle(nodeHandle);
+  ros::Rate loop_rate(purePursuitHandle.getNodeRate());
   while (ros::ok()) {
 
-    myPurePursuitHandle.run();
+    purePursuitHandle.run();
 
     ros::spinOnce();                // Keeps node alive basically
     loop_rate.sleep();              // Sleep for loop_rate

@@ -18,6 +18,7 @@ add_message_files(  # Tell catkin which custom message files to include
   ControlCommand.msg
   CarState.msg
   CarStateDt.msg
+  Mission.msg
   )
 
 generate_messages(
