@@ -2,6 +2,7 @@
     Formula Student Driverless Project (FSD-Project).
     Copyright (c) 2018:
      - Sonja Brits <britss@ethz.ch>
+     - Juraj Kabzan <kabzanj@gmail.com>
 
     FSD-Project is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

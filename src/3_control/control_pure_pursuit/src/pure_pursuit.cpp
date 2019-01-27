@@ -1,8 +1,9 @@
 /*
     Formula Student Driverless Project (FSD-Project).
     Copyright (c) 2018:
-     - Sonja Brits <britss@ethz.ch>
-
+     - Sonja Brits  <britss@ethz.ch>
+     - Juraj Kabzan <kabzanj@gmail.com>
+     
     FSD-Project is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -96,13 +97,20 @@ void PurePursuit::createControlCommand() {
         const double vel = std::hypot(state_.car_state_dt.car_state_dt.x, state_.car_state_dt.car_state_dt.y);
         control_command_.throttle.data = static_cast<float>(speed_p * (max_speed_ - vel));
     }
+
+    // Visualize
+    publishMarkers(it_center_line->x, it_center_line->y, next_point.x, next_point.y);
+
+}
+
+void PurePursuit::publishMarkers(double x_pos, double y_pos, double x_next, double y_next) const{
     visualization_msgs::MarkerArray markers;
 
     visualization_msgs::Marker marker;
     marker.color.r            = 1.0;
     marker.color.a            = 1.0;
-    marker.pose.position.x    = it_center_line->x;
-    marker.pose.position.y    = it_center_line->y;
+    marker.pose.position.x    = x_pos;
+    marker.pose.position.y    = y_pos;
     marker.pose.orientation.w = 1.0;
     marker.type               = visualization_msgs::Marker::SPHERE;
     marker.action             = visualization_msgs::Marker::ADD;
@@ -114,14 +122,13 @@ void PurePursuit::createControlCommand() {
     marker.header.frame_id    = "map";
     markers.markers.push_back(marker);
 
-    marker.pose.position.x = next_point.x;
-    marker.pose.position.y = next_point.y;
+    marker.pose.position.x = x_next;
+    marker.pose.position.y = y_next;
     marker.color.b         = 1.0;
     marker.id              = 1;
     markers.markers.push_back(marker);
 
     pub_closest_point_.publish(markers);
-
 }
 
 }

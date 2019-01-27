@@ -2,6 +2,7 @@
     Formula Student Driverless Project (FSD-Project).
     Copyright (c) 2018:
      - Sonja Brits <britss@ethz.ch>
+     - Juraj Kabzan <kabzanj@gmail.com>
 
     FSD-Project is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -57,6 +58,12 @@ class PurePursuit {
     void runAlgorithm();
 
  private:
+
+    /**
+     * Visualize
+     */
+     void publishMarkers(double x_pos, double y_pos, double x_next, double y_next) const;
+
     ros::NodeHandle& nh_;
 
     ros::Publisher pub_closest_point_;
