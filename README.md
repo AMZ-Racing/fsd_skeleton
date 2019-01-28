@@ -101,6 +101,9 @@ rqt_graph
 You should see all the nodes int the pipeline running
 - - - -
 
+# Run the workspace with FSSIM
+* see https://github.com/AMZ-Driverless/fssim#combine-it-with-simple-fsd-skeleton-framework-and-drive-a-lap
+
 # Conventions
 - - - -
 ## ROS naming conventions
