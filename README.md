@@ -2,7 +2,7 @@
 
 This is a skeleton repository for the autonomous code of a driverless FS race car. This README contains some information to get you started.
 
-The use of **Ubuntu 16.04 and ROS Kinetic** is assumed everywhere on this repository.
+The use of **Ubuntu 16.04 and ROS melodic** is assumed everywhere on this repository.
 
 This repository contains a framework for the architecture of an autonomous FS race car, with basic dummy nodes to illustrate how to organise code. Some helpful tools are also included.
 

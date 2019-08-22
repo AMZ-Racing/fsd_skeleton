@@ -10,8 +10,8 @@ WSTOOL_PACKAGE="python-wstool"
 CHECKINSTALL_PACKAGE="checkinstall"
 
 ROS_PACKAGE=(
-    "ros-kinetic-desktop-full"
-    "ros-kinetic-ros-base"
+    "ros-melodic-desktop-full"
+    "ros-melodic-ros-base"
 )
 
 FSD_WORKPACKAGES=(
@@ -77,7 +77,7 @@ package_OK=$(dpkg-query -W --showformat='${Status}\n' "${ROS_PACKAGE[1]}"  2> /d
 fi
 if [ "" == "$package_OK" ]; then
     printf "[${red}NO${end}]\n"
-    printf "Please install the ROS using: 'sudo apt install ros-kinetic-desktop-full' or 'sudo apt install ros-kinetic-ros-base'\n"
+    printf "Please install the ROS using: 'sudo apt install ros-melodic-desktop-full' or 'sudo apt install ros-melodic-ros-base'\n"
     exit 1
 fi
 printf "[${green}YES${end}]\n"
