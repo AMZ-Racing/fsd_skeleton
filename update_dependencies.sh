@@ -10,8 +10,8 @@ WSTOOL_PACKAGE="python-wstool"
 CHECKINSTALL_PACKAGE="checkinstall"
 
 ROS_PACKAGE=(
-    "ros-kinetic-desktop-full"
-    "ros-kinetic-ros-base"
+    "ros-melodic-desktop-full"
+    "ros-melodic-ros-base"
 )
 
 FSD_WORKPACKAGES=(
