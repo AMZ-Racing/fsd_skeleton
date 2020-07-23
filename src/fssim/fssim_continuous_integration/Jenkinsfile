@@ -1,0 +1,43 @@
+#!groovy
+import groovy.json.JsonOutput
+
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            agent {
+                dockerfile {
+		    dir 'fssim_continuous_integration'
+		    label 'fssim-build-container'
+                    reuseNode true
+                }
+            }
+            steps {
+		sh '''#!/bin/bash -l
+			source /opt/ros/kinetic/setup.bash
+            mkdir -p catkin_ws/src/fssim
+            shopt -s extglob
+            mv !(catkin_ws) catkin_ws/src/fssim/
+            cd catkin_ws/
+            catkin init
+            cd src/fssim/
+            ./update_dependencies.sh
+			catkin build fssim --no-status -j 1
+			'''
+            }
+        }
+    }
+
+    post {
+        always {
+	    archive "logs/**/*"
+            deleteDir()
+        }
+        failure {
+            echo 'Build failed!'
+        }
+        fixed {
+            echo 'Everything back to normal!'
+        }
+    }
+}
